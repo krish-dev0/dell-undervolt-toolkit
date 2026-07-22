@@ -1,0 +1,20 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+  categories:
+    - title: Security and safety
+      labels:
+        - security
+        - safety
+    - title: Scripts and packaging
+      labels:
+        - enhancement
+        - bug
+    - title: Documentation and research
+      labels:
+        - documentation
+        - research
+    - title: Other changes
+      labels:
+        - '*'

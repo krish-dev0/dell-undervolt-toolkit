@@ -1,0 +1,13 @@
+{
+  "repository": "krish-dev0/dell-undervolt-toolkit
+",
+  "defaultReleaseAssetPattern": "dell-undervolt-toolkit-*-full.zip",
+  "tutorialVideos": {
+    "hungarian": "https://www.youtube.com/watch?v=gJBEIfyV7DY",
+    "english": "https://www.youtube.com/watch?v=gJBEIfyV7DY"
+  },
+  "knownPayloadHashes": {
+    "bootx64EfiSha256": "4ea080ddd576117cd04f5c02d16712ea5d9249c0752214d8e4055e460d7b11e0",
+    "ruEfiSha256FromTutorialPackage": "a05eef8b029c637112a4451ca96c875bf4ee23e04738b522b9360d9b744877f2"
+  }
+}

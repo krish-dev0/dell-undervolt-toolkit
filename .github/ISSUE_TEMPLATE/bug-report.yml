@@ -1,0 +1,55 @@
+name: Script or packaging bug
+about: Report a reproducible problem in the original toolkit scripts or documentation
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not post BitLocker recovery keys, service tags, personal firmware dumps, or proprietary binaries.
+  - type: input
+    id: version
+    attributes:
+      label: Toolkit version or commit
+      placeholder: v1.0.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Installer
+        - USB preparation
+        - BIOSUtilities initialisation
+        - Dell BIOS extraction
+        - Release build
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour and sanitised error output
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Remove usernames, service tags, keys, and private paths.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I removed BitLocker recovery material, service tags, and personal firmware data.
+          required: true

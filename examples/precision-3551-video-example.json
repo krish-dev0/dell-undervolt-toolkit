@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "exampleOnly": true,
+  "portablePreset": false,
+  "source": {
+    "title": "Dell laptop undervolting tutorial",
+    "url": "https://www.youtube.com/watch?v=gJBEIfyV7DY",
+    "language": "Hungarian"
+  },
+  "machine": {
+    "manufacturer": "Dell",
+    "model": "Precision 3551",
+    "cpu": "Intel Core i5-10300H",
+    "biosVersion": null,
+    "biosInstallerSha256": null,
+    "setupModuleSha256": null
+  },
+  "firmwareVariablesShown": [
+    {
+      "displayName": "Overclocking Lock",
+      "variableName": "CpuSetup",
+      "variableGuid": null,
+      "varStoreId": null,
+      "varOffsetHex": "0xDA",
+      "originalValueHex": "0x01",
+      "demonstratedValueHex": "0x00",
+      "warning": "Example from one analysed firmware image only. Re-derive for the exact target BIOS."
+    },
+    {
+      "displayName": "CFG Lock",
+      "variableName": "CpuSetup",
+      "variableGuid": null,
+      "varStoreId": null,
+      "varOffsetHex": "0x3E",
+      "originalValueHex": "0x01",
+      "demonstratedValueHex": "0x00",
+      "warning": "Example from one analysed firmware image only. Re-derive for the exact target BIOS."
+    },
+    {
+      "displayName": "BIOS Lock",
+      "variableName": "PchSetup",
+      "variableGuid": null,
+      "varStoreId": null,
+      "varOffsetHex": "0x17",
+      "originalValueHex": "0x01",
+      "demonstratedValueHex": "0x00",
+      "warning": "This is a firmware write-protection control, not a universal undervolting requirement."
+    }
+  ],
+  "throttleStopValuesShown": {
+    "cpuCoreMillivolts": -120,
+    "cpuCacheMillivolts": -80,
+    "intelGpuMillivoltsApproximate": -25,
+    "unsliceMillivoltsApproximate": -25,
+    "turboRatiosShown": [40, 38, 36],
+    "longPowerLimitWattsApproximate": 35,
+    "shortPowerLimitWattsApproximate": 37
+  },
+  "requiredAction": "Analyse the exact target firmware with UEFITool and IFRExtractor. Record the VarStore/GUID, offset, option mapping, current byte, and hashes before any manual change."
+}

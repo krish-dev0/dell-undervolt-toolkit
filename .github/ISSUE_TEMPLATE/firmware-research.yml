@@ -1,0 +1,50 @@
+name: Model-specific research note
+about: Share reproducible firmware-analysis evidence without presenting a universal offset
+labels: [research]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An offset without exact firmware identity, VarStore/GUID evidence, hashes, and original value is not actionable. Never upload a private firmware dump or BitLocker material.
+  - type: input
+    id: model
+    attributes:
+      label: Exact laptop model
+    validations:
+      required: true
+  - type: input
+    id: bios
+    attributes:
+      label: Exact BIOS version and release date
+    validations:
+      required: true
+  - type: input
+    id: bioshash
+    attributes:
+      label: Dell BIOS installer SHA-256
+    validations:
+      required: true
+  - type: input
+    id: modulehash
+    attributes:
+      label: Extracted Setup module SHA-256
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: UEFITool and IFRExtractor evidence
+      description: Include tool versions, variable name, GUID/VarStore, offset, option mapping, and original byte. Paste text, not proprietary binaries.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: I understand this evidence applies only to the identified firmware image.
+          required: true
+        - label: I have not described the offset as universal or as a preset.
+          required: true
+        - label: I removed service tags, BitLocker material, and personal firmware data.
+          required: true

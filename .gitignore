@@ -1,0 +1,49 @@
+# Private or third-party binary payloads
+**/RU.EFI
+**/RU.efi
+**/ru.efi
+*.exe
+*.efi
+*.dll
+*.sys
+*.msi
+*.zip
+*.7z
+*.rar
+
+# Build and release outputs
+dist/
+build/
+release-input/
+Toolkit/
+USB/
+manifest.json
+*.sha256
+SHA256SUMS.txt
+
+# Firmware and working files
+BIOS/downloaded_bios/*
+BIOS/extracted_bios/*
+workdir/*
+*.bin
+*.rom
+*.fd
+*.cap
+*.pfs
+*.ifr
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Keep intentional placeholders
+!payload/EFI/BOOT/.gitkeep

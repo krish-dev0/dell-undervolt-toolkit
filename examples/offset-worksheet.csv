@@ -1,0 +1,2 @@
+Laptop manufacturer,Laptop model,Motherboard revision,BIOS version,BIOS release date,BIOS installer filename,BIOS installer SHA-256,Extracted system BIOS filename,Extracted system BIOS SHA-256,Setup module filename,Setup module SHA-256,Setting display name,Variable name,Variable GUID,VarStore ID,VarOffset hex,Current value hex,Desired option label,Desired value hex,IFR extractor/version,UEFITool version,Verified by,Verification date UTC,Restored original value tested,Notes
+Dell,,,,,,,,,,,,,,,,,,,,,,,,
