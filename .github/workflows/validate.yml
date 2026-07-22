@@ -22,11 +22,13 @@ jobs:
           $failed = $false
           Get-ChildItem -Recurse -File -Include *.ps1,*.psm1 | ForEach-Object {
             $tokens = $null
-            $errors = $null
-            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
-            foreach ($error in @($errors)) {
-              Write-Error "$($_.FullName):$($error.Extent.StartLineNumber): $($error.Message)" -ErrorAction Continue
-              $failed = $true
+            $parseErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$parseErrors)
+            if ($parseErrors) {
+              foreach ($pe in $parseErrors) {
+                Write-Error "$($_.FullName):$($pe.Extent.StartLineNumber): $($pe.Message)" -ErrorAction Continue
+                $failed = $true
+              }
             }
           }
           if ($failed) { throw 'PowerShell parser errors were found.' }
