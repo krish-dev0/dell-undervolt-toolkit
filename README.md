@@ -122,7 +122,7 @@ The installer supports all of these layouts:
    .\\install.ps1 -Repository 'krish-dev0/dell-undervolt-toolkit' -RuEfiPath 'D:\\Downloads\\RU.EFI'
 ```
 
-2. \*\*Included inside a maintainer-created full Release ZIP\*\*
+2. **Included inside a maintainer-created full Release ZIP**
 
    `scripts/Build-Release.ps1` can extract the user-supplied `BIOSMod.zip`, place RU.EFI under `USB/EFI/BOOT`, generate a file manifest, and create a checksummed Release asset.
 
