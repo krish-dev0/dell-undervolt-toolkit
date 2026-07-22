@@ -12,7 +12,7 @@ The toolkit deliberately **does not write UEFI variables automatically**. It pre
 * Hungarian tutorial: https://www.youtube.com/watch?v=gJBEIfyV7DY
 * English tutorial: https://www.youtube.com/watch?v=gJBEIfyV7DY
 
-Both entries currently point to the same video and can be separated later.
+Both entries currently point to the same video and will be separated later. (Once the engish version done)
 
 ## The rule that matters most
 
