@@ -21,5 +21,5 @@
 
 Names are included for attribution only. This project is not affiliated with or endorsed by Dell, Intel, Microsoft, TechPowerUp, REALiX, TianoCore, or the third-party authors.
 
-See [`THIRD\\\_PARTY\\\_NOTICES.md`](THIRD_PARTY_NOTICES.md) for licensing and redistribution notes.
+See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for licensing and redistribution notes.
 
