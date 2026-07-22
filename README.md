@@ -101,8 +101,7 @@ To supply a locally obtained RU.EFI at install time:
 Replace `OWNER` with the GitHub account or organisation that owns the repository:
 
 ```powershell
-$repo = 'krish-dev0/dell-undervolt-toolkit
-'
+$repo = 'krish-dev0/dell-undervolt-toolkit'
 $installer = Join-Path $env:TEMP 'dell-undervolt-toolkit-install.ps1'
 Invoke-WebRequest "https://raw.githubusercontent.com/$repo/main/install.ps1" -OutFile $installer
 notepad $installer
@@ -194,10 +193,10 @@ Expected layout:
 
 ```text
 USB root/
-â””â”€â”€ EFI/
-    â””â”€â”€ BOOT/
-        â”œâ”€â”€ BOOTX64.EFI
-        â””â”€â”€ RU.EFI
+└── EFI/
+    └── BOOT/
+        ├── BOOTX64.EFI
+        └── RU.EFI
 ```
 
 See [UEFI USB preparation](docs/UEFI-USB.md).
@@ -248,15 +247,15 @@ The tutorial also demonstrates disabling UEFI capsule updates to prevent an oper
 
 ```text
 .
-â”œâ”€â”€ install.ps1
-â”œâ”€â”€ config/
-â”œâ”€â”€ docs/
-â”œâ”€â”€ examples/
-â”œâ”€â”€ payload/                 # intentionally empty in source control
-â”œâ”€â”€ scripts/
-â”œâ”€â”€ tests/
-â”œâ”€â”€ third\_party/
-â””â”€â”€ .github/
+├── install.ps1
+├── config/
+├── docs/
+├── examples/
+├── payload/                 # intentionally empty in source control
+├── scripts/
+├── tests/
+├── third\_party/
+├── .github/
 ```
 
 Release packages add:
@@ -275,8 +274,7 @@ See [Publishing Releases](docs/RELEASING.md). Typical commands:
 .\\scripts\\Build-Release.ps1 `
   -SourceArchive 'C:\\Path\\To\\BIOSMod.zip' `
   -Version '1.0.0' `
-  -Repository 'krish-dev0/dell-undervolt-toolkit
-'
+  -Repository 'krish-dev0/dell-undervolt-toolkit'
 ```
 
 No-RU fallback:
@@ -285,8 +283,7 @@ No-RU fallback:
 .\\scripts\\Build-Release.ps1 `
   -SourceArchive 'C:\\Path\\To\\BIOSMod.zip' `
   -Version '1.0.0' `
-  -Repository 'krish-dev0/dell-undervolt-toolkit
-' `
+  -Repository 'krish-dev0/dell-undervolt-toolkit' `
   -ExcludeRuEfi
 ```
 
