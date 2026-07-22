@@ -21,9 +21,16 @@ jobs:
           $ErrorActionPreference = 'Stop'
           $failed = $false
           Get-ChildItem -Recurse -File -Include *.ps1,*.psm1 | ForEach-Object {
+            Write-Host "Parsing file: $($_.FullName)"
             $tokens = $null
             $parseErrors = $null
-            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$parseErrors)
+            try {
+              [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$parseErrors)
+            } catch {
+              Write-Error "Exception while parsing $($_.FullName): $_" -ErrorAction Continue
+              $failed = $true
+              return
+            }
             if ($parseErrors) {
               foreach ($pe in $parseErrors) {
                 Write-Error "$($_.FullName):$($pe.Extent.StartLineNumber): $($pe.Message)" -ErrorAction Continue
