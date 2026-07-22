@@ -119,18 +119,14 @@ The installer supports all of these layouts:
 1. **Local file, recommended fallback**
 
 ```powershell
-   .\\install.ps1 -Repository 'krish-dev0/dell-undervolt-toolkit
-' -RuEfiPath 'D:\\Downloads\\RU.EFI'
-
-' -RuEfiPath 'D:\\Downloads\\RU.EFI'
-
+   .\\install.ps1 -Repository 'krish-dev0/dell-undervolt-toolkit' -RuEfiPath 'D:\\Downloads\\RU.EFI'
 ```
 
 2. \*\*Included inside a maintainer-created full Release ZIP\*\*
 
    `scripts/Build-Release.ps1` can extract the user-supplied `BIOSMod.zip`, place RU.EFI under `USB/EFI/BOOT`, generate a file manifest, and create a checksummed Release asset.
 
-3. \*\*No-RU Release\*\*
+3. **No-RU Release**
 
    Build with `-ExcludeRuEfi`. Users then provide RU.EFI locally. If an RU-containing asset is removed after a takedown request, the source repository and local-file workflow continue to work.
 
